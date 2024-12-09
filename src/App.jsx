@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "./assets/walled_logo.png";
-import NavItems from "./components/NavItems";
+import { NavItems, Heading, HeadBalance } from "./components/NavItems";
 
 function App() {
   const [activeTab, setActiveTab] = useState("Dashboard");
@@ -35,6 +35,8 @@ function App() {
           />
         </div>
       </nav>
+      <Heading />
+      <HeadBalance />
     </>
   );
 }
