@@ -1,5 +1,13 @@
+import Navbar from "../components/Navbar";
 function Transfer() {
-    return <section className="text-center text-black">Transfer</section>;
-  }
-  
-  export default Transfer;
+  return (
+    <>
+      <Navbar />
+      <form>
+        <input className="text-black" type="text" placeholder="To" />
+      </form>
+    </>
+  );
+}
+
+export default Transfer;

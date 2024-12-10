@@ -1,6 +1,9 @@
-import { NavLink } from "react-router";
+import { useState } from "react";
+import { NavLink, Link } from "react-router";
 
 function NavItems({ menu }) {
+  const [activeTab, setActiveTab] = useState("Dashboard");
+
   return (
     <ul className="flex gap-x-8 text-black">
       {menu.map((item) => {
@@ -8,9 +11,8 @@ function NavItems({ menu }) {
           <NavLink
             key={item.title}
             to={item.link}
-            className={({ isActive }) =>
-              isActive ? "text-[#19918F] font-bold" : "text-black"
-            }
+            className={({ isActive }) => (isActive ? "active" : "")}
+            onClick={() => setActiveTab(item.title)}
           >
             {item.title}
           </NavLink>

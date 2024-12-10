@@ -1,5 +1,5 @@
 import NavItems from "./NavItems";
-import logo from "../assets/walled_logo.png";
+import logo from "../assets/logo.png";
 
 const MENU = [
   {

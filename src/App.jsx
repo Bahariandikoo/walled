@@ -1,11 +1,12 @@
-import AccountBalance from "./components/AccountBalance";
 import Hero from "./components/Hero";
-
+import Navbar from "./components/Navbar";
+import Table from "./components/Table";
 function App() {
   return (
     <main>
+      <Navbar />
       <Hero />
-      <AccountBalance />
+      <Table />
     </main>
   );
 }
