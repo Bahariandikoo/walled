@@ -3,7 +3,8 @@ import avatarImg from "../assets/avatar.png";
 
 function Avatar() {
   const [isAvatarActive, setIsAvatarActive] = useState(false);
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
+  const users = JSON.parse(localStorage.getItem("login"));
   useEffect(() => {
     async function getData() {
       const url = "http://localhost:3000/users";
@@ -25,7 +26,7 @@ function Avatar() {
   return (
     <div className="flex items-center gap-x-4 ml-auto">
       <span className="text-right">
-        <p className="text-black font-bold">{`${users[0]?.email}`}</p>
+        <p className="text-black font-bold">{`${users.name}`}</p>
         <p className="text-black">Personal Account</p>
       </span>
       <div
@@ -34,7 +35,7 @@ function Avatar() {
         }`}
         onClick={() => setIsAvatarActive((prev) => !prev)}
       >
-        <img src={avatarImg} alt="avatar" className="rounded-full" />
+        <img src={users.avatarUrl} alt="avatar" className="rounded-full" />
       </div>
     </div>
   );
