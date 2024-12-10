@@ -17,7 +17,7 @@ function Avatar() {
         }`}
         onClick={() => setIsAvatarActive((prev) => !prev)}
       >
-        <img src={avatarImg} alt="avatar" className="rounded-full" />
+        <img src={avatarImg} alt="avatar" className="rounded-full size-20" />
       </div>
     </div>
   );

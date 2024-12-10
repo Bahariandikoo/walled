@@ -7,7 +7,9 @@ function NotFound() {
   return (
     <section className="flex flex-col gap-y-4 justify-center items-center w-screen h-screen">
       <p className="text-xl font-bold text-black">Are you lost?</p>
-      <ActionButton onClick={() => navigate("/")}>Go Back</ActionButton>
+      <ActionButton onClick={() => navigate("/dashboard")}>
+        Go Back
+      </ActionButton>
     </section>
   );
 }

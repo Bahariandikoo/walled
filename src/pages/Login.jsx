@@ -1,11 +1,13 @@
 import { Link } from "react-router";
 import loginBg from "../assets/login.png";
 import logo from "../assets/walled_logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import ActionButton from "../components/ActionButton";
 
 function Login() {
+
+    
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
@@ -19,6 +21,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem("email", loginForm.email);
     navigate("/dashboard");
   };
 
@@ -27,7 +30,7 @@ function Login() {
       <div className="flex flex-col w-1/2 items-center justify-center">
         <div>
           <img className="w-[290px] mx-auto" src={logo} alt="logo" />
-          <form className="flex flex-col mt-24 gap-y-5">
+          <form className="flex flex-col mt-24 gap-y-5 text-black">
             <input
               className="bg-[#FAFBFD] pl-7 py-4 min-w-[400px] rounded-[10px]"
               name="email"
